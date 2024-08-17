@@ -1,4 +1,2 @@
 # Spring_Boot_Projects
-test commit
-pp
-pull test
+Collection of demo java projects for quick lookup. 
