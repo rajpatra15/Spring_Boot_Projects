@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Processing Demo</title>
+    <link rel = "stylesheet" th:href = "@{/css/demo.css}"/>
+</head>
+<body>
+<form th:action="@{/processform3}" method="post">
+    <input type = "text" placeholder="Enter your name" name="input_name"/>
+    <input type ="submit" name="Click to submit"/>
+</form>
+</body>
+</html>

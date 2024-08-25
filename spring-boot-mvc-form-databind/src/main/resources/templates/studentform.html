@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration </title>
+    <link rel="stylesheet" th:href="@{/css/demo.css}"/>
+</head>
+<body>
+<!--th:object name should be same as the name of the model attribute in controller -->
+<form th:action="@{/processstudentform}" th:object="${theStudent}" method="post">
+
+    First Name : <input type="text" th:field="*{firstName}"/>
+    <br><br>
+    Last Name: <input type="text" th:field="*{lastName}"/>
+    <br><br>
+    <!--    country is the field name inside student model class -->
+    Country:<select th:field="*{country}">
+    <option th:each="tmpCountry: ${countries}" th:text="${tmpCountry}" th:value="${tmpCountry}"></option>
+</select>
+    <br><br>
+    Sex : <input type="radio" th:field="*{sex}"
+                 th:each="tmpSex : ${allSexOptions}" th:text="${tmpSex}" th:value="${tmpSex}"/>
+    <br><br>
+    Subjects : <input type="checkbox" th:field="*{subjects}"
+                      th:each="tmp : ${allSubjects}" th:text="${tmp}" th:value="${tmp}">
+    <input type="submit"/>
+</form>
+</body>
+</html>

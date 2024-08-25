@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form</title>
+    <style>
+        .error{
+        font-style= bold;
+        color:red;
+        }
+    </style>
+</head>
+<body>
+<h1 th:text="'Customer Details'"></h1>
+    <br><br>
+    First name : <span th:text = "${customer.firstName}"/>
+<br><br>
+    Last name : <span th:text = "${customer.lastName}"/>
+</body>
+</html>
